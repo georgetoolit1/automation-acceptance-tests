@@ -9,6 +9,8 @@ import com.automation.acceptance.tests.utils.ConfigData;
 import com.automation.acceptance.tests.utils.DataBuilder;
 import com.automation.acceptance.tests.utils.SingletonDriver;
 
+import static org.junit.Assert.assertTrue;
+
 public class StudentRegistrationFormStepDef {
     WebDriver driver= SingletonDriver.driver;
     DataBuilder dataContext = new DataBuilder().build();
@@ -31,11 +33,11 @@ public class StudentRegistrationFormStepDef {
 
     @When("^User selects the submit button$")
     public void user_selects_the_submit_button() throws Throwable {
-       studentRegistrationFormPage.selectSubmitBtn();
+        studentRegistrationFormPage.selectSubmitBtn();
     }
 
     @Then("^Success Pop up form should be displayed\\.$")
     public void success_Pop_up_form_should_be_displayed() throws Throwable {
-        studentRegistrationFormPage.verifyPopScreen();
+        assertTrue(studentRegistrationFormPage.verifyPopScreen());
     }
 }

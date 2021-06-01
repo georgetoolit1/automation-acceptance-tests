@@ -33,35 +33,29 @@ public class StudentRegistrationFormPage extends CommonUIActions {
         super(driver);
     }
 
-    public StudentRegistrationFormPage goToHomePage(String url){
+    public void goToHomePage(String url){
         driver.get(url);
-        return this;
     }
 
-    public StudentRegistrationFormPage enterFirstName(String firstName){
+    public void enterFirstName(String firstName){
         fistNameField.sendKeys(firstName);
-        return this;
     }
 
-    public StudentRegistrationFormPage enterSurname(String surName){
+    public void enterSurname(String surName){
         surNameField.sendKeys(surName);
-        return this;
     }
 
-    public StudentRegistrationFormPage enterUserEmail(String email){
+    public void enterUserEmail(String email){
         userEmailField.sendKeys(email);
-        return this;
     }
 
-    public StudentRegistrationFormPage enterUserMobile(String number1){
+    public void enterUserMobile(String number1){
         userMobileNumberField.sendKeys(number1);
-        return this;
     }
 
-    public StudentRegistrationFormPage selectSubmitBtn(){
+    public void selectSubmitBtn(){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submitBtn);
         submitBtn.click();
-        return this;
     }
 
     public StudentRegistrationFormPage selectFemaleGender(){
@@ -69,15 +63,9 @@ public class StudentRegistrationFormPage extends CommonUIActions {
         return this;
     }
 
-    public   StudentRegistrationFormPage verifyFemaleGender() {
-        femaleGender.isSelected();
-        return this;
-    }
-
-    public StudentRegistrationFormPage verifyPopScreen() {
+    public boolean verifyPopScreen() {
         driver.switchTo().activeElement();
         waitForElementVisibility(pouptitleId);
-        pouptitleId.isDisplayed();
-        return this;
+        return pouptitleId.isDisplayed();
     }
 }
