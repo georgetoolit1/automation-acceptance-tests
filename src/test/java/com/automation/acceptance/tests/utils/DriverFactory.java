@@ -1,4 +1,4 @@
-package utils;
+package com.automation.acceptance.tests.utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,6 @@ import org.openqa.selenium.opera.OperaDriver;
 public class DriverFactory {
     public WebDriver getWebDriver() {
         String browserName = System.getProperty("browser", DriverType.CHROME.name()).toUpperCase();
-
         WebDriver driver = null;
 
         switch (DriverType.valueOf(browserName)) {
@@ -40,9 +39,7 @@ public class DriverFactory {
                 WebDriverManager.operadriver().setup();
                 driver = new OperaDriver();
                 break;
-
         }
         return driver;
-
     }
 }

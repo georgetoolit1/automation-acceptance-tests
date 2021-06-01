@@ -1,4 +1,4 @@
-package utils;
+package com.automation.acceptance.tests.utils;
 
 public enum DriverType {
     CHROME,

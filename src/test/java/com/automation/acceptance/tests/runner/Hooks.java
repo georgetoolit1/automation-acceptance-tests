@@ -1,4 +1,4 @@
-package runner;
+package com.automation.acceptance.tests.runner;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import utils.SingletonDriver;
+import com.automation.acceptance.tests.utils.SingletonDriver;
 
 public class Hooks {
 
