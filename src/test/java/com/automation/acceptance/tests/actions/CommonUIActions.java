@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class CommonUIActions {
+public abstract class CommonUIActions {
     protected WebDriver driver;
     private WebDriverWait onWait;
     public Actions actions;
