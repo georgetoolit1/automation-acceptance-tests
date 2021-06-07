@@ -12,17 +12,17 @@ import java.util.Locale;
 
 @Data
 public class DataBuilder {
-    int title = new Faker().number().numberBetween(1, 2);
-    String email = new FakeValuesService(new Locale("en-GB"), new RandomService()).bothify("????##@gmail.com");
-    List<String> dob = Arrays.asList(new SimpleDateFormat("d M yyyy").format(new Faker().date().birthday()).split("\\s"));
-    String firstN = new Faker().name().firstName();
-    String lastN = new Faker().name().lastName();
-    String company = new Faker().company().name();
-    String enterAddressLine1 = new Faker().address().buildingNumber();
-    String enterAddressLine2 = new Faker().address().streetName();
-    String enterCity = new Faker().address().cityName();
-    int enterState = new Faker().number().numberBetween(1, 50);
-    String enterMobilePhone = "07439401644";
+    private int title = new Faker().number().numberBetween(1, 2);
+    private String email = new FakeValuesService(new Locale("en-GB"), new RandomService()).bothify("????##@gmail.com");
+    private List<String> dob = Arrays.asList(new SimpleDateFormat("d M yyyy").format(new Faker().date().birthday()).split("\\s"));
+    private String firstN = new Faker().name().firstName();
+    private String lastN = new Faker().name().lastName();
+    private String company = new Faker().company().name();
+    private String enterAddressLine1 = new Faker().address().buildingNumber();
+    private String enterAddressLine2 = new Faker().address().streetName();
+    private String enterCity = new Faker().address().cityName();
+    private int enterState = new Faker().number().numberBetween(1, 50);
+    private String enterMobilePhone = "074" + new Faker().phoneNumber().subscriberNumber(9);
 
     public DataBuilder build() {
         return this;

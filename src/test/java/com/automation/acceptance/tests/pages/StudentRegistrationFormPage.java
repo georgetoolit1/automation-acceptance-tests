@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 public class StudentRegistrationFormPage extends CommonUIActions {
 
     @FindBy(id ="firstName")
-    WebElement fistNameField;
+    WebElement firstNameField;
 
     @FindBy(id ="lastName")
     WebElement surNameField;
@@ -27,7 +27,7 @@ public class StudentRegistrationFormPage extends CommonUIActions {
     WebElement femaleGender;
 
     @FindBy(id = "example-modal-sizes-title-lg")
-    WebElement pouptitleId;
+    WebElement popUpTitleId;
 
     public StudentRegistrationFormPage(WebDriver driver) {
         super(driver);
@@ -38,19 +38,19 @@ public class StudentRegistrationFormPage extends CommonUIActions {
     }
 
     public void enterFirstName(String firstName){
-        fistNameField.sendKeys(firstName);
+        typeInto(firstNameField, firstName);
     }
 
     public void enterSurname(String surName){
-        surNameField.sendKeys(surName);
+        typeInto(surNameField, surName);
     }
 
     public void enterUserEmail(String email){
-        userEmailField.sendKeys(email);
+        typeInto(userEmailField, email);
     }
 
-    public void enterUserMobile(String number1){
-        userMobileNumberField.sendKeys(number1);
+    public void enterUserMobile(String userMobileNumber){
+        typeInto(userMobileNumberField, userMobileNumber);
     }
 
     public void selectSubmitBtn(){
@@ -58,14 +58,13 @@ public class StudentRegistrationFormPage extends CommonUIActions {
         submitBtn.click();
     }
 
-    public StudentRegistrationFormPage selectFemaleGender(){
+    public void selectFemaleGender(){
         femaleGender.click();
-        return this;
     }
 
     public boolean verifyPopScreen() {
         driver.switchTo().activeElement();
-        waitForElementVisibility(pouptitleId);
-        return pouptitleId.isDisplayed();
+        waitForElementVisibility(popUpTitleId);
+        return popUpTitleId.isDisplayed();
     }
 }
