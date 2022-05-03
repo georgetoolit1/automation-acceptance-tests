@@ -19,6 +19,7 @@ public class Hooks {
     @Before
     public void beforeScenario(Scenario scenario) {
         LOG.info("###### Starting Scenario : {} ######", scenario.getName());
+        driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
     }
 
@@ -42,4 +43,3 @@ public class Hooks {
         }
     }
 }
-

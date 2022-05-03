@@ -24,11 +24,11 @@ public class StudentRegistrationFormStepDef {
 
     @Given("^User fills in the form with valid data$")
     public void user_fills_in_the_form_with_valid_data() throws Throwable {
-        studentRegistrationFormPage.enterFirstName(dataContext.getFirstN());
-        studentRegistrationFormPage.enterSurname(dataContext.getLastN());
-        studentRegistrationFormPage.enterUserEmail(dataContext.getEmail());
-        studentRegistrationFormPage.enterUserMobile(dataContext.getEnterMobilePhone());
-        studentRegistrationFormPage.selectFemaleGender();
+//        studentRegistrationFormPage.enterFirstName(dataContext.getFirstN());
+//        studentRegistrationFormPage.enterSurname(dataContext.getLastN());
+//        studentRegistrationFormPage.enterUserEmail(dataContext.getEmail());
+//        studentRegistrationFormPage.enterUserMobile(dataContext.getEnterMobilePhone());
+//        studentRegistrationFormPage.selectFemaleGender();
     }
 
     @When("^User selects the submit button$")
